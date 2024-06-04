@@ -19,9 +19,9 @@ app.use("/admin", adminRouter);
 app.use("/movie", movieRouter);
 app.use("/playlist", playlistRouter);
 
-// app.use("/",  (req, res, next) => {
-//     res.send("Hello");
-// });
+app.use("/",  (req, res, next) => {
+    res.send("Hello");
+});
 
 mongoose.connect(
     `mongodb+srv://somilrathore01:${process.env.MONGODB_PASSWORD}@cluster0.xudctul.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
